@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MARTINEZ FITNESS GYM</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+     HOME PAGE
+===================================================== -->
+
+<section id="homePage" class="page active">
+
+    <div class="home-container">
+        <img src="logo.png" alt="Martinez Fitness Gym Logo" class="gym-logo-image">
+        
+        <div class="logo">
+            MARTINEZ
+            <span>FITNESS GYM</span>
+        </div>
+
+        <h1>WELCOME TO MARTINEZ FITNESS GYM</h1>
+
+        <p class="subtitle">
+            Choose your account type
+        </p>
+
+        <div class="role-container">
+
+            <!-- ADMIN -->
+            <div class="role-card">
+
+                <div class="role-icon">⚙</div>
+
+                <h2>ADMIN</h2>
+
+
+                <button onclick="showPage('adminLoginPage')">
+                    ADMIN LOGIN
+                </button>
+
+            </div>
+
+
+            <!-- CUSTODIAN -->
+            <div class="role-card">
+
+                <div class="role-icon">🛡</div>
+
+                <h2>CUSTODIAN</h2>
+
+
+                <button onclick="showPage('custodianLoginPage')">
+                    CUSTODIAN LOGIN
+                </button>
+
+            </div>
+
+
+            <!-- MEMBER -->
+            <div class="role-card">
+
+                <div class="role-icon">👤</div>
+
+                <h2>MEMBER</h2>
+
+
+                <button onclick="showPage('memberLoginPage')">
+                    MEMBER LOGIN
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ADMIN LOGIN
+===================================================== -->
+
+<section id="adminLoginPage" class="page">
+
+    <div class="login-container">
+
+        <div class="login-box">
+
+            <div class="logo">
+                MARTINEZ
+                <span>FITNESS GYM</span>
+            </div>
+
+            <div class="login-heading">
+
+                <span>ADMIN</span>
+
+                <p>
+                    Sign in to your account
+                </p>
+
+            </div>
+
+            <form id="adminLoginForm">
+
+                <label>Email</label>
+
+                <input
+                    type="email"
+                    id="adminEmail"
+                    placeholder="Enter admin email"
+                    required
+                >
+
+                <label>Password</label>
+
+                <input
+                    type="password"
+                    id="adminPassword"
+                    placeholder="Enter password"
+                    required
+                >
+
+                <button type="submit">
+                    LOGIN
+                </button>
+
+            </form>
+
+            <button
+                class="back-button"
+                onclick="showPage('homePage')">
+
+                ← BACK
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CUSTODIAN LOGIN
+===================================================== -->
+
+<section id="custodianLoginPage" class="page">
+
+    <div class="login-container">
+
+        <div class="login-box">
+
+            <div class="logo">
+                MARTINEZ
+                <span>FITNESS GYM</span>
+            </div>
+
+            <div class="login-heading">
+
+                <span>CUSTODIAN</span>
+
+                <p>
+                    Sign to your account
+                </p>
+
+            </div>
+
+            <form id="custodianLoginForm">
+
+                <label>Email</label>
+
+                <input
+                    type="email"
+                    id="custodianEmail"
+                    placeholder="Enter custodian email"
+                    required
+                >
+
+                <label>Password</label>
+
+                <input
+                    type="password"
+                    id="custodianPassword"
+                    placeholder="Enter password"
+                    required
+                >
+
+                <button type="submit">
+                    LOGIN
+                </button>
+
+            </form>
+
+            <button
+                class="back-button"
+                onclick="showPage('homePage')">
+
+                ← BACK
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     MEMBER LOGIN
+===================================================== -->
+
+<section id="memberLoginPage" class="page">
+
+    <div class="login-container">
+
+        <div class="login-box">
+
+            <div class="logo">
+                MARTINEZ
+                <span>FITNESS GYM</span>
+            </div>
+
+            <div class="login-heading">
+
+                <span>MEMBER</span>
+
+                <p>
+                    Sign in to your account
+                </p>
+
+            </div>
+
+            <form id="memberLoginForm">
+
+                <label>Email</label>
+
+                <input
+                    type="email"
+                    id="memberLoginEmail"
+                    placeholder="Enter email"
+                    required
+                >
+
+                <label>Password</label>
+
+                <input
+                    type="password"
+                    id="memberLoginPassword"
+                    placeholder="Enter password"
+                    required
+                >
+
+                <button type="submit">
+                    LOGIN
+                </button>
+
+            </form>
+
+            <button
+                class="back-button"
+                onclick="showPage('homePage')">
+
+                ← BACK
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ADMIN DASHBOARD
+===================================================== -->
+
+<section id="adminDashboardPage" class="dashboard-page">
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            MARTINEZ
+            <span>FITNESS GYM</span>
+        </div>
+
+        <div class="account-label">
+            ADMIN
+        </div>
+
+        <button
+            class="menu-button active"
+            onclick="showAdminSection('adminOverview', this)">
+
+            Dashboard
+
+        </button>
+
+        <button
+            class="menu-button"
+            onclick="showAdminSection('adminAddMember', this)">
+
+            Add Member
+
+        </button>
+
+        <button
+            class="menu-button"
+            onclick="showAdminSection('adminMembers', this)">
+
+            Members
+
+        </button>
+
+        <button
+            class="menu-button"
+            onclick="showAdminSection('adminPayments', this)">
+
+            Payments
+
+        </button>
+
+        <button
+            class="logout-button"
+            onclick="logout()">
+
+            Logout
+
+        </button>
+
+    </aside>
+
+
+    <main class="dashboard-content">
+
+
+        <!-- ADMIN OVERVIEW -->
+
+        <div
+            id="adminOverview"
+            class="dashboard-section">
+
+            <h1>Admin Dashboard</h1>
+
+            <div class="stats-container">
+
+                <div class="stat-card">
+
+                    <h3>Total Members</h3>
+
+                    <strong id="totalMembers">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <h3>Active Members</h3>
+
+                    <strong id="activeMembers">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <h3>Total Payments</h3>
+
+                    <strong id="totalPayments">
+                        ₱0
+                    </strong>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <h3>Expiring Soon</h3>
+
+                    <strong id="expiringSoon">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="content-card">
+
+                <h2>Recent Members</h2>
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Membership</th>
+                                <th>Status</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="recentMembersTable"></tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ADMIN ADD MEMBER -->
+
+        <div
+            id="adminAddMember"
+            class="dashboard-section hidden">
+
+            <h1>Add Member</h1>
+
+            <div class="content-card">
+
+                <h2>Create Member Account</h2>
+
+                <form id="adminAddMemberForm">
+
+                    <label>Full Name</label>
+
+                    <input
+                        type="text"
+                        id="adminAddName"
+                        placeholder="Enter full name"
+                        required
+                    >
+
+                    <label>Contact Number</label>
+
+                    <input
+                        type="text"
+                        id="adminAddContact"
+                        placeholder="Enter contact number"
+                        required
+                    >
+
+                    <label>Email</label>
+
+                    <input
+                        type="email"
+                        id="adminAddEmail"
+                        placeholder="Enter email"
+                        required
+                    >
+
+                    <label>Password</label>
+
+                    <input
+                        type="password"
+                        id="adminAddPassword"
+                        placeholder="Create password"
+                        required
+                    >
+
+                    <label>Membership Type</label>
+
+                    <select
+                        id="adminAddMembership"
+                        required>
+
+                        <option value="">
+                            Select membership
+                        </option>
+
+                        <option value="Daily">
+                            Daily
+                        </option>
+
+                        <option value="Weekly">
+                            Weekly
+                        </option>
+
+                        <option value="Monthly">
+                            Monthly
+                        </option>
+
+                    </select>
+
+                    <label>Payment Method</label>
+
+                    <select
+                        id="adminAddPayment"
+                        required>
+
+                        <option value="">
+                            Select payment method
+                        </option>
+
+                        <option value="Cash">
+                            Cash
+                        </option>
+
+                        <option value="GCash">
+                            GCash
+                        </option>
+
+                    </select>
+
+                    <label>Amount Paid</label>
+
+                    <input
+                        type="number"
+                        id="adminAddAmount"
+                        placeholder="Enter amount"
+                        min="0"
+                        required
+                    >
+
+                    <button type="submit">
+                        ADD MEMBER
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+        <!-- ADMIN MEMBERS -->
+
+        <div
+            id="adminMembers"
+            class="dashboard-section hidden">
+
+            <h1>Members</h1>
+
+            <div class="content-card">
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Name</th>
+                                <th>Contact</th>
+                                <th>Email</th>
+                                <th>Membership</th>
+                                <th>Start</th>
+                                <th>Expiration</th>
+                                <th>Action</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="allMembersTable"></tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ADMIN PAYMENTS -->
+
+        <div
+            id="adminPayments"
+            class="dashboard-section hidden">
+
+            <h1>Payments</h1>
+
+            <div class="content-card">
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Member</th>
+                                <th>Membership</th>
+                                <th>Payment Method</th>
+                                <th>Amount</th>
+                                <th>Date</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="paymentsTable"></tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</section>
+
+
+<!-- =====================================================
+     CUSTODIAN DASHBOARD
+===================================================== -->
+
+<section id="custodianDashboardPage" class="dashboard-page">
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            MARTINEZ
+            <span>FITNESS GYM</span>
+        </div>
+
+        <div class="account-label">
+            CUSTODIAN
+        </div>
+
+        <button
+            class="menu-button active"
+            onclick="showCustodianSection('custodianOverview', this)">
+
+            Dashboard
+
+        </button>
+
+        <button
+            class="menu-button"
+            onclick="showCustodianSection('custodianAddMember', this)">
+
+            Add Member
+
+        </button>
+
+        <button
+            class="menu-button"
+            onclick="showCustodianSection('custodianMembers', this)">
+
+            View Members
+
+        </button>
+
+        <button
+            class="logout-button"
+            onclick="logout()">
+
+            Logout
+
+        </button>
+
+    </aside>
+
+
+    <main class="dashboard-content">
+
+
+        <!-- CUSTODIAN OVERVIEW -->
+
+        <div
+            id="custodianOverview"
+            class="dashboard-section">
+
+            <h1>Custodian Dashboard</h1>
+
+            <div class="welcome-card">
+
+                <h2>
+                    Welcome, Custodian
+                </h2>
+
+            </div>
+
+
+            <div class="stats-container">
+
+                <div class="stat-card">
+
+                    <h3>Total Members</h3>
+
+                    <strong id="custodianTotalMembers">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CUSTODIAN ADD MEMBER -->
+
+        <div
+            id="custodianAddMember"
+            class="dashboard-section hidden">
+
+            <h1>Add Member</h1>
+
+            <div class="content-card">
+
+                <h2>Create Member Account</h2>
+
+                <form id="custodianAddMemberForm">
+
+                    <label>Full Name</label>
+
+                    <input
+                        type="text"
+                        id="custodianAddName"
+                        placeholder="Enter full name"
+                        required
+                    >
+
+                    <label>Contact Number</label>
+
+                    <input
+                        type="text"
+                        id="custodianAddContact"
+                        placeholder="Enter contact number"
+                        required
+                    >
+
+                    <label>Email</label>
+
+                    <input
+                        type="email"
+                        id="custodianAddEmail"
+                        placeholder="Enter email"
+                        required
+                    >
+
+                    <label>Password</label>
+
+                    <input
+                        type="password"
+                        id="custodianAddPassword"
+                        placeholder="Create password"
+                        required
+                    >
+
+                    <label>Membership Type</label>
+
+                    <select
+                        id="custodianAddMembership"
+                        required>
+
+                        <option value="">
+                            Select membership
+                        </option>
+
+                        <option value="Daily">
+                            Daily
+                        </option>
+
+                        <option value="Weekly">
+                            Weekly
+                        </option>
+
+                        <option value="Monthly">
+                            Monthly
+                        </option>
+
+                    </select>
+
+                    <label>Payment Method</label>
+
+                    <select
+                        id="custodianAddPayment"
+                        required>
+
+                        <option value="">
+                            Select payment method
+                        </option>
+
+                        <option value="Cash">
+                            Cash
+                        </option>
+
+                        <option value="GCash">
+                            GCash
+                        </option>
+
+                    </select>
+
+                    <label>Amount Paid</label>
+
+                    <input
+                        type="number"
+                        id="custodianAddAmount"
+                        placeholder="Enter amount"
+                        min="0"
+                        required
+                    >
+
+                    <button type="submit">
+                        ADD MEMBER
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+        <!-- CUSTODIAN MEMBERS -->
+
+        <div
+            id="custodianMembers"
+            class="dashboard-section hidden">
+
+            <h1>Member List</h1>
+
+            <div class="content-card">
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Name</th>
+                                <th>Contact</th>
+                                <th>Email</th>
+                                <th>Membership</th>
+                                <th>Start</th>
+                                <th>Expiration</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="custodianMembersTable"></tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</section>
+
+
+<!-- =====================================================
+     MEMBER DASHBOARD
+===================================================== -->
+
+<section id="memberDashboardPage" class="dashboard-page">
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            MARTINEZ
+            <span>FITNESS GYM</span>
+        </div>
+
+        <div class="account-label">
+            MEMBER
+        </div>
+
+        <button
+            class="menu-button active"
+            onclick="showMemberSection('memberOverview', this)">
+
+            My Dashboard
+
+        </button>
+
+        <button
+            class="menu-button"
+            onclick="showMemberSection('memberMembership', this)">
+
+            My Membership
+
+        </button>
+
+        <button
+            class="menu-button"
+            onclick="showMemberSection('memberPayment', this)">
+
+            My Payment
+
+        </button>
+
+        <button
+            class="logout-button"
+            onclick="logout()">
+
+            Logout
+
+        </button>
+
+    </aside>
+
+
+    <main class="dashboard-content">
+
+
+        <!-- MEMBER OVERVIEW -->
+
+        <div
+            id="memberOverview"
+            class="dashboard-section">
+
+            <h1>My Dashboard</h1>
+
+            <div class="welcome-card">
+
+                <h2>
+                    Welcome,
+                    <span id="memberWelcomeName">
+                        Member
+                    </span>
+                </h2>
+
+                <p>
+                    Welcome to MARTINEZ FITNESS GYM.
+                </p>
+
+            </div>
+
+
+            <div class="stats-container">
+
+                <div class="stat-card">
+
+                    <h3>Membership</h3>
+
+                    <strong id="memberMembershipType">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <h3>Status</h3>
+
+                    <strong id="memberStatus">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <h3>Start Date</h3>
+
+                    <strong id="memberStartDate">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <h3>Expiration</h3>
+
+                    <strong id="memberExpiration">
+                        -
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- MEMBER MEMBERSHIP -->
+
+        <div
+            id="memberMembership"
+            class="dashboard-section hidden">
+
+            <h1>My Membership</h1>
+
+            <div class="content-card">
+
+                <h2>Membership Details</h2>
+
+                <p>
+                    <strong>
+                        Membership Type:
+                    </strong>
+
+                    <span id="membershipDetailType">
+                        -
+                    </span>
+                </p>
+
+                <p>
+                    <strong>
+                        Start Date:
+                    </strong>
+
+                    <span id="membershipDetailStart">
+                        -
+                    </span>
+                </p>
+
+                <p>
+                    <strong>
+                        Expiration Date:
+                    </strong>
+
+                    <span id="membershipDetailEnd">
+                        -
+                    </span>
+                </p>
+
+                <p>
+                    <strong>
+                        Status:
+                    </strong>
+
+                    <span id="membershipDetailStatus">
+                        -
+                    </span>
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- MEMBER PAYMENT -->
+
+        <div
+            id="memberPayment"
+            class="dashboard-section hidden">
+
+            <h1>My Payment</h1>
+
+            <div class="content-card">
+
+                <h2>Payment Details</h2>
+
+                <p>
+                    <strong>
+                        Payment Method:
+                    </strong>
+
+                    <span id="memberPaymentMethod">
+                        -
+                    </span>
+                </p>
+
+                <p>
+                    <strong>
+                        Amount Paid:
+                    </strong>
+
+                    ₱<span id="memberAmountPaid">
+                        0
+                    </span>
+                </p>
+
+                <p>
+                    <strong>
+                        Payment Date:
+                    </strong>
+
+                    <span id="memberPaymentDate">
+                        -
+                    </span>
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</section>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
